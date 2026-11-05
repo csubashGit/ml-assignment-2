@@ -218,3 +218,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Assignment PDF (not tracked)
+ML_Assignment_2_AIML_26Oct26.pdf
