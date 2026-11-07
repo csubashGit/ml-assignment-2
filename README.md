@@ -28,8 +28,8 @@ Predict a person's **obesity level** (7 classes, from *Insufficient_Weight* to *
 **Pre-processing:** numeric features are standardised (`StandardScaler`) and categorical features are one-hot encoded (`OneHotEncoder`). The pre-processing is bundled with each classifier in a scikit-learn `Pipeline`, so every saved model in `model/` takes raw CSV columns directly. Data split: stratified 80/20 train/test (`random_state=27`). The 418-row test split is saved as `test_data.csv`.
 
 ## c. Links
-- **GitHub repository:** `<add your GitHub repo link here>`
-- **Live Streamlit app:** `<add your Streamlit Community Cloud link here>`
+- **GitHub repository:** `https://github.com/csubashGit/ml-assignment-2/`
+- **Live Streamlit app:** `https://ml-assignment-2-vnxg4cfqbws2vvnebbfywr.streamlit.app/`
 
 ## d. Models Used & Comparison Table
 Models: Logistic Regression, Decision Tree, K-Nearest Neighbours, Gaussian Naive Bayes and Support Vector Machine (RBF kernel). AUC is one-vs-rest. Precision, Recall and F1 are weighted averages over the 7 classes.
