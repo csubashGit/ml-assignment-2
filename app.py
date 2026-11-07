@@ -45,8 +45,12 @@ with tab_compare:
     if metrics_file.exists():
         st.subheader("Hold-out test metrics (from training run)")
         board = pd.read_csv(metrics_file).set_index("Model")
-        st.dataframe(board.style.highlight_max(axis=0, color="#c6efce").format("{:.4f}"),
-                     width="stretch")
+        try:
+            # Styler highlighting needs jinja2; fall back to a plain table if unavailable
+            st.dataframe(board.style.highlight_max(axis=0, color="#c6efce").format("{:.4f}"),
+                         width="stretch")
+        except (ImportError, AttributeError):
+            st.dataframe(board.round(4), width="stretch")
         st.bar_chart(board)
 
 with tab_eval:
